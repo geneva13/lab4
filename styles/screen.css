@@ -1,3 +1,40 @@
+:root {
+    --jeffs-fav-color: blue;
+    --jeffs-baseline-grid: 8px
+
+}
+
+main {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 100px;
+    gap: 20px 40px;
+    background: rgba(255,0,0,0,5);
+
+}
+
+.module {
+    background: #ccc;
+}
+
+.module.one {
+grid-column-start: 1;
+grid-column-end: 2;
+grid-row-start: 1;
+grid-row-end: 4;
+}
+
+.module.one {
+grid-column: 1 / 3;
+grid-row: 1 / 3;
+}
+h1 {
+    
+    color: var(--jeffs-fav-color);
+    font-size: var(--jeffs-baseline-grid);
+
+}
 body {
     font-family: Helvetica, sans-serif;
     color: #EAE8FF;

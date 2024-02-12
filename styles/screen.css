@@ -85,3 +85,24 @@ h1 strong {
 img.about {
     opacity: 0.5;
 }
+
+.planets{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* grid-template-rows: repeat(1, 1fr); */
+    grid-auto-rows: 30vh;
+    gap: 3vh;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    margin-bottom: 20vh;
+}
+
+.planet{
+    background-color: var(--planet-card-color);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 5vh;
+}

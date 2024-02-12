@@ -1,78 +1,23 @@
 :root {
-    --jeffs-fav-color: blue;
-    --jeffs-baseline-grid: 8px
+    --back: rgb(28, 28, 95);
+    --font: rgb(219, 241, 255);
 
 }
 
-main {
 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 100px;
-    gap: 20px 40px;
-    background: rgba(255,0,0,0,5);
 
-}
-
-.module {
-    background: #ccc;
-}
-
-.module.one {
-grid-column-start: 1;
-grid-column-end: 2;
-grid-row-start: 1;
-grid-row-end: 4;
-}
-
-.module.one {
-grid-column: 1 / 3;
-grid-row: 1 / 3;
-}
-h1 {
-    
-    color: var(--jeffs-fav-color);
-    font-size: var(--jeffs-baseline-grid);
-
-}
 body {
     font-family: Helvetica, sans-serif;
-    color: #EAE8FF;
-    background: #2D3142;
+    background: var(--back);
     padding: 0 40px;
     text-align: center;
 }
 
-nav {
-    margin: 40px auto 0 auto;
-    width: 250px;
-    border-radius: 50px;
-    background: #212431;
-}
-
-nav ul {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    list-style-type: none;
-    margin: 0;
-}
-
-nav ul li a {
-    display: inline-block;
-    padding: 20px;
-    color: #EAE8FF;
-    text-decoration: none;
-    font-size: 1.2em;
-}
 
 h1 {
-    font-size: 8em;
+    font-size: 6em;
     letter-spacing: -2px;
+    color: var(--font);
 }
 
 h1 strong {
@@ -82,27 +27,75 @@ h1 strong {
     -webkit-text-fill-color: transparent;
 }
 
-img.about {
-    opacity: 0.5;
-}
 
 .planets{
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    /* grid-template-rows: repeat(1, 1fr); */
-    grid-auto-rows: 30vh;
-    gap: 3vh;
-    margin-left: 10vh;
-    margin-right: 10vh;
-    margin-bottom: 20vh;
-}
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    background-color: var(--back);
+    padding: 10px;
+    gap: 10px
+  }
 
 .planet{
-    background-color: var(--planet-card-color);
-    border-radius: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding-top: 5vh;
+    background-color: rgb(101, 103, 177);
+    color: black;
+    padding: 10%;
+    border-radius: 1rem;
+}
+
+.planet:hover{
+    background-color: var(--font);
+}
+
+.planet.sun{
+    grid-column: 1/3;
+    grid-row: 1/3;
+    
+}
+
+.circle{
+    height: 100px;
+    width: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 20%;
+}
+
+.circle.sun{
+    background-image: radial-gradient(red, rgb(255, 187, 0), rgb(251, 255, 0));
+    height: 200px;
+    width: 200px;
+}
+
+.circle.mercury{
+    background-image: radial-gradient(red, yellow, green);
+}
+
+.circle.venus{
+    background-image: radial-gradient(red, rgb(238, 182, 0), rgb(163, 0, 82));
+}
+
+.circle.earth{
+    background-image: radial-gradient(rgb(47, 0, 255), rgb(53, 101, 133), green);
+}
+
+.circle.mars{
+    background-image: radial-gradient(rgb(251, 255, 0), rgb(172, 172, 21), rgb(105, 128, 0));
+}
+
+.circle.jupiter{
+    background-image: radial-gradient(rgb(204, 119, 119), rgb(185, 176, 136), rgb(160, 113, 142));
+}
+
+.circle.saturn{
+    background-image: radial-gradient(rgb(219, 164, 255), rgb(170, 149, 184), rgb(102, 88, 119));
+}
+
+.circle.uranus{
+    background-image: radial-gradient(rgb(81, 45, 214), rgb(103, 174, 255), rgb(141, 232, 255));
+}
+
+.circle.neptune{
+    background-image: radial-gradient(rgb(4, 0, 255), rgb(0, 110, 255), rgb(19, 0, 128));
 }
